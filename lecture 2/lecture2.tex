@@ -1,0 +1,133 @@
+\section{Lecture 2 -- Exercises}
+
+\subsection{Exercise 1 (Positivity improvement of the inverse operator)}
+
+Let $X$ be a finite set and let $L$ be an injective operator on $C(X)$. Show that the following assertions are equivalent:
+\begin{itemize}
+	\item [(i)]
+		The inverse operator $L^{-1}$ is positivity improving, i.e. for all $f\in C(X)$ such that $f\geq 0(\neq 0)$ we have $L^{-1}f>0$.
+	\item [(ii)]
+		For each function $u\in C(X)$ satisfying the inequalities $\max_{X} u(x)\geq 0$ and $Lu\leq 0$, we have $u\equiv 0$.
+\end{itemize}
+
+\paragraph{Solution:}
+
+\paragraph{(i)$\implies$(ii)}
+Suppose $u\in C(X)$ such that $\max_{X}u(x)\geq 0$ and $Lu\leq 0$. Set $v:=Lu$ then by assumption $L^{-1}v<0\implies u<0$ if $v\neq 0$. Clearly this is not possible as $\max_{X}u(x)\geq 0$. Hence, we must have that $v=0\implies u\equiv 0$.
+
+\paragraph{(ii)$\implies$(i)}
+For any $f\geq 0(\neq 0)$ we have by the injectivity of $L$ that there exists a unique $g$ such that $L(-g)=-f\leq 0$. If $\max_{X}-g(x)\geq 0$ then by assumption $g\equiv 0$. However this is not possible since $f\neq 0$. Therefore, we must have $-g<0\implies g>0$. Applying $L^{-1}$ we then have $L^{-1}f=g>0$.
+
+\subsection{Exercise 2 (Cauchy problem / Heat equation)}
+
+Let $(X,m)$ be a finite measure space and let $L$ be a self-adjoint operator on $\ell^{2}(X,m)$ and for $t\geq 0$ let $e^{-tL}$ be defined via the spectral calulus.
+\begin{itemize}
+	\item [(a)]
+		Show that for all $t\geq 0$,
+		\begin{equation*}
+			e^{-tL} = \sum_{n=0}^{\infty}\frac{-1}{n!}(-tL)^{n}
+		\end{equation*}
+		In particular, show that the sum is absolutely convergent with respect to the operator norm.
+	\item [(b)]
+		Show that $\left\{e^{-tL} \colon t\geq 0\right\}$, equipped with the composition of operators, is an operator semigroup, i.e., $e^{0L}=I$ and $e^{(t+s)L}=e^{tL}e^{sL}$ for all $t,s\geq 0$ and $t\mapsto e^{-tL}f$ is continuously differentiable at $t=0$ for all $f\in\ell^{2}(X,m)$. Moreover, show that (in this finite dimensional case),
+		\begin{equation*}
+			\frac{d}{dt}e^{-tL} = -Le^{-tL} = -e^{tL}L
+		\end{equation*}
+	\item [(c)]
+		Show that for all $f\in\ell^{2}(X,m)$, the function $t\mapsto \varphi_{t}:=e^{-tL}f$ is the unique solution of the equation,
+		\begin{equation*}
+			\frac{d}{dt}\varphi_{t} = -L\varphi_{t}, \quad \varphi_{0}=f
+		\end{equation*}
+		for all $t\geq 0$.
+\end{itemize}
+
+\paragraph{Solution:}
+
+\paragraph{(a)}
+We first make sure the series given exists, that is, show that it is absolutely convergent. Treating the series as a power series we have coefficients $a_{n}=\frac{(-1)^{n+1}L^{n}}{n!}$ so,
+\begin{equation*}
+	\frac{\left\|\frac{(-1)^{n+2}L^{n+1}}{(n+1)!}\right\|}{\left\|\frac{(-1)^{n+1}L^{n}}{n!}\right\|} = \frac{\|L\|}{n+1}\to 0 \quad \text{as} \quad n\to\infty
+\end{equation*}
+since $\ell^{2}(X,m)$ is finite dimensional then $\|L\|<\infty$. Hence, the radius of convergence of the given series is $\infty$ and it indeed exists.
+
+Using the definition of $e^{-tL}$ and a Taylor series of the real valued function $e^{-\lambda t}$ we have,
+\begin{equation*}
+	\begin{aligned}
+		e^{-tL} = \sum_{\lambda\in\sigma(L)}e^{-\lambda t}E_{\lambda} &= \sum_{\lambda\in\sigma(L)}\left(\sum_{n=0}^{\infty}\frac{(-\lambda)^{n}}{n!}t^{n}\right)E_{\lambda}\\
+		&= \sum_{n=0}^{\infty}\frac{1}{n!}(-t)^{n}\left(\sum_{\lambda\in\sigma(L)}\lambda^{n}E_{\lambda}\right) = \sum_{n=0}^{\infty}\frac{1}{n!}(-tL)^{n}
+	\end{aligned}
+\end{equation*}
+as,
+\begin{equation*}
+	L^{2} = \sum_{\lambda\in\sigma(L)}\lambda^{2}E_{\lambda}^{2} = \sum_{\lambda\in\sigma(L)}\lambda^{2}E_{\lambda} \implies L^{n} = \sum_{\lambda\in\sigma(L)}\lambda^{n}E_{\lambda}
+\end{equation*}
+by properties of projections.
+
+\paragraph{(b)}
+Using the spectral calculus definition,
+\begin{equation*}
+	e^{0L} = \sum_{\lambda\in\sigma(L)}e^{\lambda 0}E_{\lambda} = \sum_{\lambda\in\sigma(L)}E_{\lambda} = I
+\end{equation*}
+and,
+\begin{equation*}
+	\begin{aligned}
+		e^{(t+s)L} = \sum_{\lambda\in\sigma(L)}e^{\lambda(t+s)}E_{\lambda} &= \sum_{\lambda\in\sigma(L)}e^{\lambda t}e^{\lambda s}E_{\lambda}^{2}\\
+		&= \sum_{\lambda\in\sigma(L)}e^{\lambda t}E_{\lambda}\sum_{\mu\in\sigma(L)}e^{\mu s}E_{\mu} = e^{tL}e^{sL}
+	\end{aligned}
+\end{equation*}
+for all $t,s\geq 0$. By properties of power series we have that $e^{-tL}$ is analytic and so it is continuously differentiable for all $t\geq 0$, in particular we have term-wise differentiate of the series which gives,
+\begin{equation*}
+	\frac{d}{dt}e^{-tL} = \sum_{n=0}^{\infty}\frac{(-1)^{n}}{n!}nt^{n-1}L^{n} = -L\sum_{n=0}^{\infty}\frac{(-1)^{n-1}}{(n-1)!}(tL)^{n-1} = -Le^{-tL} = -e^{-tL}L
+\end{equation*}
+where the last equality follows since the operator is self-adjoint.
+
+\paragraph{(c)}
+This follows immediately from (b). The differential equation comes from,
+\begin{equation*}
+	\frac{d}{dt}\varphi_{t} = \left(\frac{d}{dt}e^{-tL}\right)f = -L\varphi_{t}
+\end{equation*}
+by the continuous differentiability of the map $t\mapsto e^{-tL}f$. The initial condition is immediate by the continuity of the map, $\varphi_{0} = e^{0L}f = f$.
+
+\subsection{Exercise 3 (Stochastic incompleteness)}
+
+Let $(b,c)$ be a connected graph over $(X,m)$ and let $L=L_{b,c,m}$ denote the associated Laplacian.
+\begin{itemize}
+	\item [(a)]
+		Show that $e^{-tL}1<1$ for all $t>0$ if and only if $c\neq 0$.
+	\item [(b)]
+		Show that if $e^{-tL}1<1$ for some $t>0$, then $e^{-tL}1<1$ for all $t>0$.
+\end{itemize}
+
+\paragraph{Solution:}
+
+\paragraph{(a)}
+By Theorem 1.20 in the notes we have that $e^{-tL}$ has the Markov property, that is,
+\begin{equation*}
+	0\leq e^{-tL}f\leq 1 \quad \text{for all} \quad 0\leq f\leq 1\text{ and }t\geq 0
+\end{equation*}
+
+\subparagraph{($\implies$)}
+If $c=0$ then $L1=0$ and so $u_{t}:=1$ is a solution of,
+\begin{equation*}
+	\frac{d}{dt}u_{t} = -Lu_{t},\quad u_{0} = 1
+\end{equation*}
+By uniqueness of solutions we then have $e^{-tL}1 = 1$ for all $t>0$. Hence, by contrapositive statements $e^{-tL}1 < 1 \forall t>0\implies c\neq 0$.
+
+\subparagraph{($\impliedby$)}
+Suppose $c\neq 0$ then $L1=c\neq 0$. So the problem,
+\begin{equation*}
+	\frac{d}{dt}u_{t} = Lu_{t}\,\quad u_{0}=1
+\end{equation*}
+cannot have a constant solution. As $u_{t}:=e^{-tL}1$ is a solution to the above problem we must have $e^{-tL}1\neq 1\implies e^{-tL}1<1$ for all $t>0$.
+
+\paragraph{(b)}
+
+Assume there exists $t_{0}>0$ and some $x_{0}\in X$ such that,
+\begin{equation*}
+	(e^{-t_{0}L}1)(x_{0}) = 1
+\end{equation*}
+Then $u_{t}(x_{0}):=\left(1 - e^{-tL}1\right)(x_{0})$ has a minimum at $t_{0}$. So,
+\begin{equation*}
+	0 = L1(x_{0}) - Lu_{t_{0}}(x_{0}) = \frac{c(x_{0})}{m(x_{0})} + \sum_{y\sim x}b(x,y)u_{t_{0}}(y)
+\end{equation*}
+and we have $c(x_{0})=0$. By the connectedness of the graph we can iterate this argument and hence have $c=0$. Now by (a) we must have $e^{-tL}1=1$ for all $t>0$ however this is a contradiction to our assumption and so we must have that $e^{-tL}1<1$ for all $t>0$.

@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Lecture 1 -- Exercises}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Exercise 1 (Normal Contractions)}{3}{subsection.1.1}%
+\contentsline {paragraph}{Solution:}{3}{section*.2}%
+\contentsline {subsection}{\numberline {1.2}Exercise 2 (First Beurling-Deny criterion)}{4}{subsection.1.2}%
+\contentsline {paragraph}{Solution:}{4}{section*.3}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(ii)}{5}{section*.4}%
+\contentsline {paragraph}{(ii)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(i)}{5}{section*.5}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(iii)}{5}{section*.6}%
+\contentsline {paragraph}{(iii)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(i)}{5}{section*.7}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Leftarrow \mathrel {\mkern -2.5mu}\Rightarrow \tmspace +\thickmuskip {.2777em}$(iv)}{6}{section*.8}%
+\contentsline {subsection}{\numberline {1.3}Exercise 3 (Harmonic functions and connected components)}{6}{subsection.1.3}%
+\contentsline {paragraph}{Solution:}{6}{section*.9}%
+\contentsline {subsection}{\numberline {1.4}Exercise 4 (Poisson equation for $\alpha =0$)}{6}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Lecture 2 -- Exercises}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exercise 1 (Positivity improvement of the inverse operator)}{8}{subsection.2.1}%
+\contentsline {paragraph}{Solution:}{8}{section*.10}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(ii)}{8}{section*.11}%
+\contentsline {paragraph}{(ii)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(i)}{8}{section*.12}%
+\contentsline {subsection}{\numberline {2.2}Exercise 2 (Cauchy problem / Heat equation)}{8}{subsection.2.2}%
+\contentsline {paragraph}{Solution:}{9}{section*.13}%
+\contentsline {paragraph}{(a)}{9}{section*.14}%
+\contentsline {paragraph}{(b)}{9}{section*.15}%
+\contentsline {paragraph}{(c)}{10}{section*.16}%
+\contentsline {subsection}{\numberline {2.3}Exercise 3 (Stochastic incompleteness)}{10}{subsection.2.3}%
+\contentsline {paragraph}{Solution:}{10}{section*.17}%
+\contentsline {paragraph}{(a)}{10}{section*.18}%
+\contentsline {subparagraph}{($\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$)}{10}{section*.19}%
+\contentsline {subparagraph}{($\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Leftarrow \joinrel \Relbar \tmspace +\thickmuskip {.2777em}$)}{11}{section*.20}%
+\contentsline {paragraph}{(b)}{11}{section*.21}%
+\contentsline {section}{\numberline {3}Lecture 3 -- Exercises}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Exercise 1 ($\mathcal {F}=C(X)$)}{12}{subsection.3.1}%
+\contentsline {paragraph}{Solution:}{12}{section*.22}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Leftarrow \mathrel {\mkern -2.5mu}\Rightarrow \tmspace +\thickmuskip {.2777em}$(ii)}{12}{section*.23}%
+\contentsline {paragraph}{(iii)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(i)}{12}{section*.24}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(iii)}{13}{section*.25}%
+\contentsline {subsection}{\numberline {3.2}Exercise 2 (Maximum principle)}{13}{subsection.3.2}%
+\contentsline {paragraph}{(i)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(ii)}{13}{section*.26}%
+\contentsline {paragraph}{(ii)$\DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}$(i)}{13}{section*.27}%
+\contentsline {subsection}{\numberline {3.3}Exercise 3 (Uncountable graphs)}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Exercise 4 (Summability)}{14}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Lecture 4 -- Exercises}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Exercise 1 (Resolvents are continuous)}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Exercise 2 (Multiplication operators I)}{15}{subsection.4.2}%
+\contentsline {paragraph}{Solution:}{15}{section*.28}%
+\contentsline {subsection}{\numberline {4.3}Exercise 3 (Multiplication operators II)}{16}{subsection.4.3}%
+\contentsline {paragraph}{Solution:}{17}{section*.29}%
+\contentsline {subsection}{\numberline {4.4}Exercise 4 (Closure convergence)}{17}{subsection.4.4}%
+\contentsline {paragraph}{Solution:}{18}{section*.30}%

@@ -1,0 +1,221 @@
+\section{Lecture 1 -- Exercises}
+
+\subsection{Exercise 1 (Normal Contractions)}
+\begin{itemize}
+	\item [(a)]
+		Show that the following maps from $\mathbb{R}$ to $\mathbb{R}$ are normal contractions:
+		\begin{itemize}
+			\item 
+				$C_{+}:t\mapsto t\vee 0$
+			\item 
+				$C_{-}:t\mapsto (-t)\vee 0$
+			\item 
+				$C_{(-\infty,1]}:t\mapsto t\wedge 1$
+			\item 
+				$C_{[0,1]}:t\mapsto 0\vee(t\wedge 1)$
+		\end{itemize}
+		For which $a\leq b$ is $C_{[a,b]}:t\mapsto a\vee(t\wedge b)$ a normal contraction?
+
+	\item [(b)]
+		Let $X$ be a finite set and let $\mathcal{Q}$ be a symmetric bilinear form on $C(X)$. Show that $\mathcal{Q}$ is compatible with normal contractions if it is compatible with the map $C_{(-\infty,1]}$.
+\end{itemize}
+
+\paragraph{Solution:}
+\begin{itemize}
+	\item [(a)]
+		\begin{itemize}
+			\item 
+				$C_{+}(0) = 0$.\\
+				\begin{equation*}
+					\begin{aligned}
+						\left|C_{+}(s) - C_{+}(t)\right| &= \left|(s\vee 0) - (t\vee 0)\right|\\
+						&=
+						\begin{cases}
+							0 &\text{if }s,t\leq 0\\
+							|s - t| &\text{if }s,t>0\\
+							|s| &\text{if }s\geq 0>t
+						\end{cases} \leq |s - t|
+					\end{aligned}
+				\end{equation*}
+			\item 
+				$C_{-}(0) = 0$.\\
+				\begin{equation*}
+					\begin{aligned}
+						|C_{-}(s) - C_{-}(t)| &= |(-s)\vee 0 - (-t)\vee 0|\\
+						&=
+						\begin{cases}
+							|t - s| &\text{if }s,t\leq 0\\
+							0 &\text{if }s,t>0\\
+							|t| &\text{if }s\geq 0>t
+						\end{cases} \leq |s - t|
+					\end{aligned}
+				\end{equation*}
+			\item 
+				$C_{(-\infty,1]}(0) = 0$.\\
+				\begin{equation*}
+					\begin{aligned}
+						|C_{(\infty,1]}(s) - C_{(\infty,1]}(t)| &= |s\wedge 1 - t\wedge 1|\\
+						&=
+						\begin{cases}
+							|s - t| &\text{if }s,t\leq 1\\
+							0 &\text{if }s,t>1\\
+							|s - 1| &\text{if }s\leq 1<t
+						\end{cases} \leq |s - t|
+					\end{aligned}
+				\end{equation*}
+			\item 
+				$C_{[0,1]}(0) = 0$.\\
+				\begin{equation*}
+					\begin{aligned}
+						|C_{[0,1]}(s) - C_{[0,1]}(t)| &= |0\vee(s\wedge 1) - 0\vee(t\wedge 1)|\\
+						&=
+						\begin{cases}
+							|s - t| &\text{if }s,t\in[0,1]\\
+							0 &\text{if }s,t\not\in[0,1]\\
+							|s - 1| &\text{if }s\in[0,1]\text{ and }t\not\in[0,1]
+						\end{cases} \leq |s - t|
+					\end{aligned}
+				\end{equation*}
+		\end{itemize}
+		To determine $a,b$ notice if $b<0$ then
+		\begin{equation*}
+			C_{[a,b]}(0) = a\vee(0\wedge b) = a\wedge b \neq 0
+		\end{equation*}
+		So we must have $b\geq 0$ in which case,
+		\begin{equation*}
+			C_{[a,b]}(0) = a\vee 0 = 0 \iff a\leq 0
+		\end{equation*}
+		Now to ensure the contraction property,
+		\begin{equation*}
+			\begin{aligned}
+				|C_{[a,b]}(s) - C_{[a,b]}(t)| &= |a\vee(s\wedge b) - a\vee(t\wedge b)|\\
+				&= 
+				\begin{cases}
+					|s - t| &\text{if }s,t\in[a,b]\\
+					0 &\text{if }s,t\not\in[a,b]\\
+					|s - b| &\text{if }s\in[a,b]\text{ and }t\not\in[a,b]
+				\end{cases} \leq |s - t|
+			\end{aligned}
+		\end{equation*}
+		Therefore if $a\leq 0\leq b$ then $C_{[a,b]}$ is a normal contraction.
+\end{itemize}
+
+\subsection{Exercise 2 (First Beurling-Deny criterion)}
+Let $X$ be a finite set and let $\mathcal{Q}$ be a symmetric bilinear form over $X$. For any $f\in C(X)$, let $f_{+}=f\vee 0$ bet the \textit{positive part} and let $f_{-}=(-f)\vee 0$ be the \textit{negative part} of $f$.
+
+Show the following equivalence:
+\begin{itemize}
+	\item [(i)]
+		$\mathcal{Q}(|f|) \leq \mathcal{Q}(f)$ for all $f\in C(X)$.
+	\item [(ii)]
+		$\mathcal{Q}(f_{+},f_{-}) \leq 0$ for all $f\in C(X)$.
+	\item [(iii)]
+		$\mathcal{Q}(f\vee g) + \mathcal{Q}(f\wedge g) \leq \mathcal{Q}(f) + \mathcal{Q}(g)$ for all $f,g\in C(X)$.
+\end{itemize}
+and for $\mathcal{Q}$ positive show that this is also equivalent to:
+\begin{itemize}
+	\item [(iv)]
+		$\mathcal{Q}(f_{+}) \leq \mathcal{Q}(f)$ for all $f\in C(X)$.
+\end{itemize}
+
+\paragraph{Solution:}
+
+\paragraph{(i)$\implies$(ii)}
+By properties of symmetric forms,
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{Q}(f_{=}) + 2\mathcal{Q}(f_{+},f_{-}) + \mathcal{Q}(f_{-}) &= \mathcal{Q}(|f|)\\
+		&\leq \mathcal{Q}(f) = \mathcal{Q}(f_{+}) - 2\mathcal{Q}(f_{+},f_{-}) + \mathcal{Q}(f_{-})
+	\end{aligned}
+\end{equation*}
+Then rearranging gives,
+\begin{equation*}
+	\mathcal{Q}(f_{+},f_{-}) \leq 0 \quad \forall f\in C(X)
+\end{equation*}
+
+\paragraph{(ii)$\implies$(i)}
+By properties of symmetric forms,
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{Q}(f) &= \mathcal{Q}(f_{+}) - 2\mathcal{Q}(f_{+},f_{-}) + \mathcal{Q}(f_{-})\\
+		&\geq \mathcal{Q}(f_{+}) + 2\mathcal{Q}(f_{+},f_{-}) + \mathcal{Q}(f_{-}) = \mathcal{Q}(|f|) \quad \forall f\in C(X)
+	\end{aligned}
+\end{equation*}
+
+\paragraph{(i)$\implies$(iii)}
+We can write $f\vee g = \frac{1}{2}(f+g)+\frac{1}{2}|f-g|$ and $f\wedge g = \frac{1}{2}(f+g)-\frac{1}{2}|f-g|$. Then,
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{Q}(f\vee g) &= \frac{1}{4}\mathcal{Q}(f+g) + \frac{1}{2}\mathcal{Q}(f+g,|f-g|) + \frac{1}{4}\mathcal{Q}(|f-g|)\\
+		&\leq \frac{1}{4}\mathcal{Q}(f+g) + \frac{1}{2}\mathcal{Q}(f+g,|f-g|) + \frac{1}{4}\mathcal{Q}(f-g)\\
+		&= \frac{1}{4}\mathcal{Q}(f) + \frac{1}{2}\mathcal{Q}(f,g) + \frac{1}{4}\mathcal{Q}(g) + \frac{1}{2}\mathcal{Q}(f+g,|f-g|) + \frac{1}{4}\mathcal{Q}(f) - \frac{1}{2}\mathcal{Q}(f,g) + \frac{1}{2}\mathcal{Q}(g)\\
+		&= \frac{1}{2}\mathcal{Q}(f) + \frac{1}{2}\mathcal{Q}(g) + \frac{1}{2}\mathcal{Q}(f+g,|f-g|)
+	\end{aligned}
+\end{equation*}
+By the same method,
+\begin{equation*}
+	\mathcal{Q}(f\wedge g) \leq \frac{1}{2}\mathcal{Q}(f) + \frac{1}{2}\mathcal{Q}(g) - \frac{1}{2}\mathcal{Q}(f+g,|f-g|)
+\end{equation*}
+and so,
+\begin{equation*}
+	\mathcal{Q}(f\vee g) + \mathcal{Q}(f\wedge g) \leq \mathcal{Q}(f) + \mathcal{Q}(g)
+\end{equation*}
+
+\paragraph{(iii)$\implies$(i)}
+By the same calculations as above,
+\begin{equation*}
+	\frac{1}{2}\mathcal{Q}(f+g) + \frac{1}{2}\mathcal{Q}(|f-g|) \leq \mathcal{Q}(f) + \mathcal{Q}(g)
+\end{equation*}
+rearranging and expanding,
+\begin{equation*}
+	\begin{aligned}
+		\frac{1}{2}\mathcal{Q}(|f-g|) &\leq \mathcal{Q}(f) + \mathcal{Q}(g) - \frac{1}{2}\mathcal{Q}(f) - \frac{1}{2}\mathcal{Q}(f,g) - \frac{1}{2}\mathcal{Q}(g)\\
+		&= \frac{1}{2}\mathcal{Q}(f-g)
+	\end{aligned}
+\end{equation*}
+Choosing $g=0$ gives the result.
+
+\paragraph{(i)$\iff$(iv)}
+We work with the assumption that $\mathcal{Q}$ is positive now. If (ii) holds then,
+\begin{equation*}
+	\mathcal{Q}(f^{+}) \leq \mathcal{Q}(f^{+}) - 2\mathcal{Q}(f^{+},f^{-}) + \mathcal{Q}(f^{-}) = \mathcal{Q}(f)
+\end{equation*}
+If (iv) holds then,
+\begin{equation*}
+	0 \leq \mathcal{Q}(f^{-}) - 2\mathcal{Q}(f^{+},f^{-})
+\end{equation*}
+
+\subsection{Exercise 3 (Harmonic functions and connected components)}
+Let $(b,c)$ be a graph over a finite set measure space $(X,m)$ with associated Laplacian $L=L_{b,c,m}$ and let,
+\begin{equation*}
+	H = \left(f\in C(X)\colon Lf = 0\right)
+\end{equation*}
+be the subspace of harmonic functions. Show that $\dim H$ is equal to the number of connected components of $(b,c)$ on which $c$ vanished.
+
+\paragraph{Solution:}
+On any connected component where $c$ vanishes we have that any constant function (only on the connected component and zero everywhere else) is harmonic,
+\begin{equation*}
+	L\mathds{1}(x) = \frac{1}{m(x)}\sum_{y\in X}b(x,y)(\mathds{1}(x) - \mathds{1}(y)) = 0
+\end{equation*}
+Let $n\in\mathbb{N}$ denote the number of connected components of $(b,c)$. The constant functions $\mathds{1}$ on connected components where $c$ vanishes form a linearly independent set in $C(X)$ and so $V$. Hence $\dim H \geq n$.
+
+If $f\in H$ let us consider it over a connected component where $c$ vanishes. Then,
+\begin{equation*}
+	(Lf)(x) = \frac{1}{m(x)}\sum_{y\in X} b(x,y)(f(x) - f(y)) = 0
+\end{equation*}
+for every $x$ in the connected component. In particular, if we take the cut-off of $f$ to any connected component where $c$ vanishes then we have a collection of linearly independent functions. The number of such functions would clearly equal the number of connected components where $c$ vanishes.
+
+\subsection{Exercise 4 (Poisson equation for \texorpdfstring{$\alpha=0$)})}
+Let $b$ be a graph over a finite set measure space $(X,m)$ (that is $c=0$) and let $L=L_{b,0,m}$ be the associated Laplacian. Furthermore let,
+\begin{equation*}
+	V:=\left\{f\in C(X)\colon \sum_{x\in X}f(x)m(x) = 0\right\}
+\end{equation*}
+Show that for each $f\in V$, there is a unique functions $u\in V$ such that,
+\begin{equation*}
+	Lu = f
+\end{equation*}
+
+\textit{Hint:} Observe that for the scalar product in $\ell^{2}(X,m)$, we have for all $f\in\ell^{2}(X,m)$,
+\begin{equation*}
+	\sum_{x\in X}f(x)m(x) = \braket{f,1}
+\end{equation*}

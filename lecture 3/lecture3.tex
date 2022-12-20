@@ -1,0 +1,100 @@
+\section{Lecture 3 -- Exercises}
+
+\subsection{Exercise 1 (\texorpdfstring{$\mathcal{F}=C(X)$}))}
+
+Let $\mathcal{F}$ be the domain of the formal Lapalacian $\mathcal{L}$ associated to a graph. Show that the following statements are equivalent.
+\begin{itemize}
+	\item [(i)]
+		The graph is locally finite.
+	\item [(ii)]
+		$\mathcal{L}C_{c}(X)\subseteq C_{c}(X)$
+	\item [(iii)]
+		$C(X) = \mathcal{F}$.
+\end{itemize}
+
+\paragraph{Solution:}
+\paragraph{(i)$\iff$(ii)}
+Any $f\in C_{c}(X)$ has finite support so it is immediate that any $f\in C_{c}(X)$ can be written as a linear combination of indicator functions. Consider now $\mathds{1}_{x}$ then,
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{L}\mathds{1}_{x}(z) &= \frac{1}{m(z)}\left[\sum_{y\in X}b(z,y)(\mathds{1}_{x}(z) - \mathds{1}_{x}(y)) + c(z)\mathds{1}_{x}(z)\right]\\
+		&=
+		\begin{cases}
+			-\frac{b(x,z)}{m(z)}& \text{if }z\neq x\\
+			\text{Deg}(x)& \text{if }z=x
+		\end{cases}
+	\end{aligned}
+\end{equation*}
+So $\mathcal{L}\mathds{1}_{x} = \text{Deg}(x)\mathds{1}_{x} - \frac{b(x,\cdot)}{m(\cdot)}$. If $\mathcal{L}C_{c}(X)\subseteq C_{c}(X)$ then $\mathcal{L}\mathds{1}_{x}$ has finite support. It is clear that $\mathcal{L}\mathds{1}_{x}(x)\neq 0$ however if $\mathcal{L}\mathds{1}_{x}(z)\neq 0$ for $z\neq x$ then we must have that $b(x,z)\neq 0\implies z$ is a neighbour of $x$. Hence the set $\left\{z\colon x\sim z\right\}$ is finite.
+
+If we instead assume the graph is locally finite, then there are only finitely many elements which give $b(x,z)\neq 0$ and so $\mathcal{L}\mathds{1}_{x}\in C_{c}(X)$ as it has finite support. Since any $f\in C_{c}(X)$ can be written as a linear combination of indicator functions we have $\mathcal{L}f\in C_{c}(X)\implies\mathcal{L}C_{c}(X)\subseteq C_{c}(X)$.
+
+\paragraph{(iii)$\implies$(i)}
+Since $C(X)$ contains all functions on $X$. For any $x\in X$ we define the function,
+\begin{equation*}
+	f_{x}(y) :=
+	\begin{cases}
+		\frac{1}{b(x,y)}& \text{if }x\sim y\\
+		0& \text{if }x\not\sim y
+	\end{cases}
+\end{equation*}
+and have,
+\begin{equation*}
+	\sum_{y\in X}b(x,y)f_{x}(y)<\infty
+\end{equation*}
+Clearly we must have that $\left\{y\colon x\sim y\right\}$ is a finite set otherwise the sum above is a series of 1 which diverges. Hence the graph is locally finite.
+
+\paragraph{(i)$\implies$(iii)}
+If the graph is locally finite then for any $x\in X$,
+\begin{equation*}
+	\sum_{y\in X}b(x,y)
+\end{equation*}
+is a finite sum. So for any $f\in C(X)$ we have that,
+\begin{equation*}
+	\sum_{y\in X}b(x,y)|f(y)|<\infty
+\end{equation*}
+as it is a finite sum. Hence, $C(X)=\mathcal{F}$.
+
+\subsection{Exercise 2 (Maximum principle)}
+
+Let $\mathcal{A}:C_{c}(X)\to C_{c}(X)$ be a symmetric linear operator, i.e., $\mathcal{A}\mathds{1}_{x}(y) = \mathcal{A}\mathds{1}_{y}(x)$ for all $x,y\in X$. Show the following equivalence:
+\begin{itemize}
+	\item [(i)]
+		$\mathcal{A}=\mathcal{L}_{b,c}$ on $C_{c}(X)$ for a locally finite graph $(b,c)$ over $X$.
+	\item [(ii)]
+		$\mathcal{A}$ satisfies a maximum principle.
+\end{itemize}
+
+\paragraph{(i)$\implies$(ii)}
+Suppose $f\in C_{c}(X)$ has a non-negative local maximum at $x$. Then,
+\begin{equation*}
+	\mathcal{A}f(x) = \mathcal{L}_{b,c}f(x) = \frac{1}{m(x)}\left[\sum_{y\in X}b(x,y)(f(x) - f(y)) + c(x)f(x)\right]
+\end{equation*}
+since $f(x)\geq 0$ and $f(x)\geq f(y)$ for all $y\sim x$ then $\mathcal{A}f(x)\geq 0$.
+
+\paragraph{(ii)$\implies$(i)}
+Let $a$ be the (infinite) matrix associated to $\mathcal{A}$. By the maximum principle if $-\mathcal{A}\mathds{1}_{x}(y)\geq 0$ for all $y\neq x$. Since $\mathcal{A}\mathds{1}_{x}(y) = a(x,y)$ then $a(x,y)\leq 0$ for all $y\neq x$. Next for the one function we have $\mathcal{A}\mathds{1}(x)\geq 0$ for all $x\in X$ and so $\sum_{y\in X}a(x,y)\geq 0$.
+
+\subsection{Exercise 3 (Uncountable graphs)}
+
+Let $X$ be an arbitrary set and assume that $b:X\times X\to [0,\infty)$ satisfies $b(x,y) = b(y,x)$, $b(x,x)=0$ and,
+\begin{equation*}
+	\sum_{z\in X}b(x,z) = \sup_{U\subseteq X\text{ finite}}\sum_{y\in U}b(x,y)<\infty
+\end{equation*}
+for all $x\in X$. Call a subset $Y$ and $X$ connected if for arbitrary $x,y\in Y$ there exists $n\in\mathbb{N}$ and $x_{0},\ldots,x_{n}\in Y$ with $x_{0}=x$, $x_{n}=y$ and $b(x_{k}, x_{k+1})>0$ for all $k=0,\ldots,n-1$. Show that any connected subset of $X$ is connected.
+
+\subsection{Exercise 4 (Summability)}
+
+Let $X$ be a countable set, $b:X\times X\to [0,\infty)$ and $Q:C(X)\to[0,\infty]$,
+\begin{equation*}
+	Q(f) = \frac{1}{2}\sum_{x,y\in X}b(x,y)(f(x) - f(y))^{2}
+\end{equation*}
+Show that,
+\begin{equation*}
+	Q(\varphi)<\infty
+\end{equation*}
+for all $\varphi\in C_{c}(X)$ if and only if,
+\begin{equation*}
+	\sum_{y\in X}b(x,y)<\infty
+\end{equation*}
+for all $x\in X$.

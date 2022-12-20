@@ -1,0 +1,158 @@
+\section{Lecture 4 -- Exercises}
+
+\subsection{Exercise 1 (Resolvents are continuous)}
+
+Show that the resolvent map of an operator $A$ on a Hilbert space $H$,
+\begin{equation*}
+	\rho(A)\to B(H) \quad z\mapsto (A-z)^{-1}
+\end{equation*}
+is continuous.
+
+\subsection{Exercise 2 (Multiplication operators I)}
+
+Let $(X,\mu)$ be a measure space and let $u:X\to\mathbb{C}$ be measurable. The operator $M_{u}$ of multiplcation by $u$ has domain,
+\begin{equation*}
+	D(M_{u}) = \left\{f\in L^{2}(X,\mu)\colon uf\in L^{2}(X,\mu)\right\}
+\end{equation*}
+and acts as,
+\begin{equation*}
+	M_{u}f = uf
+\end{equation*}
+for all $f\in D(M_{u})$. Show the following statements.
+\begin{itemize}
+	\item [(a)]
+		The operator $M_{u}$ is densely defined.
+	\item [(b)]
+		The operator $M_{u}$ is closed.
+	\item [(c)]
+		The adjoint of $M_{u}$ is given by $(M_{u})^{*} = M_{\overline{u}}$. In particular, $M_{u}$ is self-adjoint if $u$ is real-valued.
+	\item [(d)]
+		The operator $M_{u}$ is bounded if $u\in L^{\infty}(X,\mu)$.
+\end{itemize}
+
+\paragraph{Solution:}
+\begin{itemize}
+	\item [(a)]
+		Consider the sets $X_{n}:=\left\{x\in X\colon |u(x)|\leq n\right\}$ for every $n\in\mathbb{N}$. For any $f\in L^{2}(X,\mu)$ take the sequence $\mathds{1}_{X_{n}}f$. Now,
+		\begin{equation*}
+			|\mathds{1}_{X_{n}}f(x)|\leq f(x) \quad \forall n\in\mathbb{N}
+		\end{equation*}
+		and $\mathds{1}_{X_{n}}f\to f$ a.e then by DCT $\mathds{1}_{X_{n}}f\to f$ in $L^{2}(X,\mu)$. We also have,
+		\begin{equation*}
+			u\mathds{1}_{X_{n}}f \leq n\mathds{1}_{X_{n}}f\in L^{2}(X,\mu)\implies \mathds{1}_{X_{n}}f\in D(M_{u}) \quad \forall n\in\mathbb{N}
+		\end{equation*}
+		Therefore, $\overline{D(M_{u})} = L^{2}(X,\mu)$.
+	\item [(b)]
+		Suppose $f_{n}\in D(M_{u})$ such that $f_{n}\to f$ and $uf_{n}\to g$ in $L^{2}(X,\mu)$. We can take a subsequence $f_{n_{k}}$ such that $f_{n_{k}}\to f$ a.e and $uf_{n_{k}}\to g$ in $L^{2}(X,\mu)$. Taking a further subsequence (which we relabel as $\cdot_{n_{k}}$) we have $uf_{n_{k}}\to uf$ a.e and so we must have that $uf = g$ and $f\in D(M_{u})$.
+	\item [(c)]
+		For any $f\in D(M_{u})$ and $g\in D(M_{u}^{*})$ we have the identity,
+		\begin{equation*}
+			\braket{g,M_{u}f} = \braket{M_{u}^{*}g,f}
+		\end{equation*}
+		Since this is the $L^{2}$ inner product and as it is linear in its second argument we have,
+		\begin{equation*}
+			\braket{g,M_{u}f} = \int_{X}\overline{g}uf\,d\mu = \int_{X}\overline{\overline{u}g}f\,d\mu = \braket{\overline{u}g,f}
+		\end{equation*}
+		Hence,
+		\begin{equation*}
+			\braket{g,M_{u}f} = \braket{M_{\overline{u}}g,f}
+		\end{equation*}
+		for all $f\in D(M_{u})$ and $g\in D(M_{u}^{*})$ so $M_{u}^{*} = M_{\overline{u}}$. Of course if $u$ is real-valued we have $\overline{u}=u$ and clearly $M_{u}$ is self-adjoint.
+	\item [(d)]
+		If $u\in L^{\infty}(X,\mu)$ we can write,
+		\begin{equation*}
+			\|M_{u}f\|_{2} = \|uf\|_{2}\leq \|u\|_{\infty}\|f\|_{2} \quad \forall f\in L^{2}(X,\mu)
+		\end{equation*}
+\end{itemize}
+
+\subsection{Exercise 3 (Multiplication operators II)}
+
+Let $(X,\mu)$ be a $\sigma$-finite measure space and $M_{u}$ the multiplication operator for a measurable function $u:X\to\mathbb{C}$.
+\begin{itemize}
+	\item [(a)]
+		The operator $M_{u}$ is self-adjoint if and only if the essential range of $u$ is contained in $\mathbb{R}$, which, in turn, holds if and only if $u$ is real-valued almost everywhere.
+	\item [(b)]
+		The operator $M_{u}$ is bounded if and only if the essential range of $u$ is bounded, which, in turn, holds if and only if $u\in L^{\infty}(X,\mu)$. In this case,
+		\begin{equation*}
+			\|M_{u}\| = \|u\|_{\infty} = \sup\left\{|\lambda|\colon \lambda \text{ is in the essential range of }u\right\}
+		\end{equation*}
+	\item [(c)]
+		$M_{u}=0$ holds if and only if the essential range of $u$ is $\{0\}$ which, in turn, holds if and only if $u=0$ holds almost everywhere.
+\end{itemize}
+
+\paragraph{Solution:}
+\begin{itemize}
+	\item [(a)]
+		\begin{equation*}
+			\begin{aligned}
+				M_{u}\text{ self-adjoint} &\iff \int_{X}\overline{uf}f\,d\mu = \int_{X}\overline{f}uf\,d\mu \quad \forall f\in D(M_{u})\\
+				&\iff \int_{X}(\overline{u}-u)|f|^{2}\,d\mu = 0 \quad \forall f\in D(M_{u})\\
+				&\iff u = \overline{u}\text{ a.e}\\
+				&\iff u \text{ is real-valued a.e}\\
+				&\iff \text{ess ran }u\subset\mathbb{R}
+			\end{aligned}
+		\end{equation*}
+	\item [(b)]
+		\begin{equation*}
+			\begin{aligned}
+				M_{u} \text{ bounded} &\iff \int_{X}|uf|^{2}\,d\mu \leq C\int_{X}|f|^{2}\,d\mu \quad \forall f\in L^{2}(X,\mu)\\
+				&\iff \int_{X}(C-|u|^{2})|f|^{2}\,d\mu\geq 0 \quad \forall f\in L^{2}(X,\mu)\\
+				&\iff |u|^{2}\leq C\\
+				&\iff \sup\left\{|\lambda|\colon \lambda\in\text{ess ran }u\right\}\leq K\\
+				&\iff \|u\|_{\infty} = \sup\left\{|\lambda|\colon \lambda\in\text{ess ran }u\right\}\text{ and }u\in L^{\infty}(X,\mu)
+			\end{aligned}
+		\end{equation*}
+	\item [(c)]
+		\begin{equation*}
+			\begin{aligned}
+				M_{u}=0 &\iff 0 = \|M_{u}f\|_{2}^{2} = \int_{X}|uf|^{2}\,d\mu \quad \forall (0\neq)f\in D(M_{u})\\
+				&\iff u = 0 \text{ a.e}\\
+				&\iff \text{ess ran }u = \left\{0\right\}
+			\end{aligned}
+		\end{equation*}
+\end{itemize}
+
+\subsection{Exercise 4 (Closure convergence)}
+
+Let $(L_{n})$ be a sequence of self-adjoint operators on a Hilbert space and let $L$ be a self-adjoint operator. Assume that for a family $(\Phi_{\alpha})_{\alpha\in I}$ of measurable bounded functions from $\mathbb{R}$ to $\mathbb{R}$ and some index set $I$ we have,
+\begin{equation*}
+	\lim_{n\to\infty}\Phi_{\alpha}(L_{n})f = \Phi_{\alpha}(L)f
+\end{equation*}
+for all $f$ in the Hilbert space and for all $\alpha\in I$. Let $\mathcal{A}$ be the closure of $\left\{\Phi_{\alpha}\colon \alpha\in I\right\}$ with respect to the supremum norm. Show that,
+\begin{equation*}
+	\lim_{n\to\infty}\Phi(L_{n})f = \Phi(L)f
+\end{equation*}
+for all $\Phi\in\mathcal{A}$ and $f$ in the Hilbert space.
+
+\paragraph{Solution:}
+
+We perform a classical three epsilon argument. For any $\Phi\in\mathcal{A}$ take $\Phi_{\alpha_{k}}$ such that $\left\|\Phi_{\alpha_{k}}-\Phi\right\|_{\infty}\to 0$ as $k\to\infty$. We can then write,
+\begin{equation*}
+	\begin{aligned}
+		\left\|\Phi(L_{n})f - \Phi(L)f\right\|_{H} &\leq \left\|\Phi(L_{n})f - \Phi_{\alpha_{k}}(L_{n})f\right\|_{H} + \left\|\Phi_{\alpha_{k}}(L_{n})f - \Phi_{\alpha_{k}}(L)f\right\|_{H}\\
+		&\hspace{15mm}+ \left\|\Phi_{\alpha_{k}}(L)f - \Phi(L)f\right\|_{H}
+	\end{aligned}
+\end{equation*}
+and it is clear by assumption that $\left\|\Phi_{\alpha_{k}}(L_{n})f - \Phi_{\alpha_{k}}(L)f\right\|_{H}\to 0$. Now by the Spectral theorem (Theorem 3.6 in the notes) we have,
+\begin{equation*}
+	\left\|\Phi_{\alpha_{k}}(L)f - \Phi(L)f\right\|_{H} = \left\|UM_{\Phi_{\alpha_{k}}\circ u}U^{-1}f - UM_{\Phi\circ u}U^{-1}f\right\|_{H}
+\end{equation*}
+Setting $\psi:=U^{-1}f$ and recalling that $U$ is a unitary operator we can write,
+\begin{equation*}
+	\begin{aligned}
+		\left\|\Phi_{\alpha_{k}}(L)f - \Phi(L)f\right\|_{H} &\leq \left\|M_{\Phi_{\alpha_{k}}\circ u}\psi - M_{\Phi\circ u}\psi\right\|_{2}\\
+		&= \left\|M_{\Phi_{\alpha_{k}}\circ u - \Phi\circ u}\psi\right\|_{2} \leq \left\|\Phi_{\alpha_{k}} - \Phi\right\|_{\infty}\|\psi\|_{2}\to 0
+	\end{aligned}
+\end{equation*}
+where the last inequality comes from Exercise 3(b) (or Proposition 3.4 in the notes). By a similar argument we have,
+\begin{equation*}
+	\left\|\Phi(L_{n})f - \Phi_{\alpha_{k}}(L_{n})f\right\|_{H} \leq \left\|M_{\Phi\circ u_{n} - \Phi_{\alpha_{k}}\circ u_{n}}\psi_{n}\right\|_{2}
+\end{equation*}
+where $\psi_{n} = U^{-1}_{n}f$. Notice that $\left\|\psi_{n}\right\|_{2} = \left\|U^{-1}_{n}f\right\|_{2}\leq \left\|f\right\|_{2}$ and so $\psi_{n}$ is a bounded sequence. Hence,
+\begin{equation*}
+	\left\|\Phi(L_{n})f - \Phi_{\alpha_{k}}(L_{n})f\right\|_{H} \leq \left\|\Phi - \Phi_{\alpha_{k}}\right\|_{\infty}\|\psi_{n}\|_{2}\to 0
+\end{equation*}
+Putting all this together gives,
+\begin{equation*}
+	\left\|\Phi(L_{n})f - \Phi(L)f\right\|_{H}\to 0 \quad \text{as} \quad n\to\infty
+\end{equation*}
