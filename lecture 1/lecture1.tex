@@ -1,10 +1,10 @@
 \section{Lecture 1 -- Exercises}
 
 \subsection{Exercise 1 (Normal Contractions)}
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item
 		Show that the following maps from $\mathbb{R}$ to $\mathbb{R}$ are normal contractions:
-		\begin{itemize}
+		\begin{enumerate}
 			\item 
 				$C_{+}:t\mapsto t\vee 0$
 			\item 
@@ -13,17 +13,17 @@
 				$C_{(-\infty,1]}:t\mapsto t\wedge 1$
 			\item 
 				$C_{[0,1]}:t\mapsto 0\vee(t\wedge 1)$
-		\end{itemize}
+		\end{enumerate}
 		For which $a\leq b$ is $C_{[a,b]}:t\mapsto a\vee(t\wedge b)$ a normal contraction?
 
-	\item [(b)]
+	\item 
 		Let $X$ be a finite set and let $\mathcal{Q}$ be a symmetric bilinear form on $C(X)$. Show that $\mathcal{Q}$ is compatible with normal contractions if it is compatible with the map $C_{(-\infty,1]}$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
-\begin{itemize}
-	\item [(a)]
-		\begin{itemize}
+\begin{enumerate}[(a)]
+	\item
+		\begin{enumerate}
 			\item 
 				$C_{+}(0) = 0$.\\
 				\begin{equation*}
@@ -76,7 +76,7 @@
 						\end{cases} \leq |s - t|
 					\end{aligned}
 				\end{equation*}
-		\end{itemize}
+		\end{enumerate}
 		To determine $a,b$ notice if $b<0$ then
 		\begin{equation*}
 			C_{[a,b]}(0) = a\vee(0\wedge b) = a\wedge b \neq 0
@@ -98,25 +98,25 @@
 			\end{aligned}
 		\end{equation*}
 		Therefore if $a\leq 0\leq b$ then $C_{[a,b]}$ is a normal contraction.
-\end{itemize}
+\end{enumerate}
 
 \subsection{Exercise 2 (First Beurling-Deny criterion)}
 Let $X$ be a finite set and let $\mathcal{Q}$ be a symmetric bilinear form over $X$. For any $f\in C(X)$, let $f_{+}=f\vee 0$ bet the \textit{positive part} and let $f_{-}=(-f)\vee 0$ be the \textit{negative part} of $f$.
 
 Show the following equivalence:
-\begin{itemize}
-	\item [(i)]
+\begin{enumerate}[(i)]
+	\item
 		$\mathcal{Q}(|f|) \leq \mathcal{Q}(f)$ for all $f\in C(X)$.
-	\item [(ii)]
+	\item
 		$\mathcal{Q}(f_{+},f_{-}) \leq 0$ for all $f\in C(X)$.
-	\item [(iii)]
+	\item
 		$\mathcal{Q}(f\vee g) + \mathcal{Q}(f\wedge g) \leq \mathcal{Q}(f) + \mathcal{Q}(g)$ for all $f,g\in C(X)$.
-\end{itemize}
+\end{enumerate}
 and for $\mathcal{Q}$ positive show that this is also equivalent to:
-\begin{itemize}
-	\item [(iv)]
+\begin{enumerate}[(iv)]
+	\item
 		$\mathcal{Q}(f_{+}) \leq \mathcal{Q}(f)$ for all $f\in C(X)$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
 

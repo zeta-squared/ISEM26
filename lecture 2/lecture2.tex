@@ -3,12 +3,12 @@
 \subsection{Exercise 1 (Positivity improvement of the inverse operator)}
 
 Let $X$ be a finite set and let $L$ be an injective operator on $C(X)$. Show that the following assertions are equivalent:
-\begin{itemize}
-	\item [(i)]
+\begin{enumerate}[(i)]
+	\item
 		The inverse operator $L^{-1}$ is positivity improving, i.e. for all $f\in C(X)$ such that $f\geq 0(\neq 0)$ we have $L^{-1}f>0$.
-	\item [(ii)]
+	\item
 		For each function $u\in C(X)$ satisfying the inequalities $\max_{X} u(x)\geq 0$ and $Lu\leq 0$, we have $u\equiv 0$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
 
@@ -21,25 +21,25 @@ For any $f\geq 0(\neq 0)$ we have by the injectivity of $L$ that there exists a 
 \subsection{Exercise 2 (Cauchy problem / Heat equation)}
 
 Let $(X,m)$ be a finite measure space and let $L$ be a self-adjoint operator on $\ell^{2}(X,m)$ and for $t\geq 0$ let $e^{-tL}$ be defined via the spectral calulus.
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item 
 		Show that for all $t\geq 0$,
 		\begin{equation*}
 			e^{-tL} = \sum_{n=0}^{\infty}\frac{-1}{n!}(-tL)^{n}
 		\end{equation*}
 		In particular, show that the sum is absolutely convergent with respect to the operator norm.
-	\item [(b)]
+	\item 
 		Show that $\left\{e^{-tL} \colon t\geq 0\right\}$, equipped with the composition of operators, is an operator semigroup, i.e., $e^{0L}=I$ and $e^{(t+s)L}=e^{tL}e^{sL}$ for all $t,s\geq 0$ and $t\mapsto e^{-tL}f$ is continuously differentiable at $t=0$ for all $f\in\ell^{2}(X,m)$. Moreover, show that (in this finite dimensional case),
 		\begin{equation*}
 			\frac{d}{dt}e^{-tL} = -Le^{-tL} = -e^{tL}L
 		\end{equation*}
-	\item [(c)]
+	\item 
 		Show that for all $f\in\ell^{2}(X,m)$, the function $t\mapsto \varphi_{t}:=e^{-tL}f$ is the unique solution of the equation,
 		\begin{equation*}
 			\frac{d}{dt}\varphi_{t} = -L\varphi_{t}, \quad \varphi_{0}=f
 		\end{equation*}
 		for all $t\geq 0$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
 
@@ -91,12 +91,12 @@ by the continuous differentiability of the map $t\mapsto e^{-tL}f$. The initial 
 \subsection{Exercise 3 (Stochastic incompleteness)}
 
 Let $(b,c)$ be a connected graph over $(X,m)$ and let $L=L_{b,c,m}$ denote the associated Laplacian.
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item 
 		Show that $e^{-tL}1<1$ for all $t>0$ if and only if $c\neq 0$.
-	\item [(b)]
+	\item 
 		Show that if $e^{-tL}1<1$ for some $t>0$, then $e^{-tL}1<1$ for all $t>0$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
 

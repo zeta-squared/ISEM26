@@ -19,20 +19,20 @@ and acts as,
 	M_{u}f = uf
 \end{equation*}
 for all $f\in D(M_{u})$. Show the following statements.
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item
 		The operator $M_{u}$ is densely defined.
-	\item [(b)]
+	\item
 		The operator $M_{u}$ is closed.
-	\item [(c)]
+	\item
 		The adjoint of $M_{u}$ is given by $(M_{u})^{*} = M_{\overline{u}}$. In particular, $M_{u}$ is self-adjoint if $u$ is real-valued.
-	\item [(d)]
+	\item
 		The operator $M_{u}$ is bounded if $u\in L^{\infty}(X,\mu)$.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item
 		Consider the sets $X_{n}:=\left\{x\in X\colon |u(x)|\leq n\right\}$ for every $n\in\mathbb{N}$. For any $f\in L^{2}(X,\mu)$ take the sequence $\mathds{1}_{X_{n}}f$. Now,
 		\begin{equation*}
 			|\mathds{1}_{X_{n}}f(x)|\leq f(x) \quad \forall n\in\mathbb{N}
@@ -42,9 +42,9 @@ for all $f\in D(M_{u})$. Show the following statements.
 			u\mathds{1}_{X_{n}}f \leq n\mathds{1}_{X_{n}}f\in L^{2}(X,\mu)\implies \mathds{1}_{X_{n}}f\in D(M_{u}) \quad \forall n\in\mathbb{N}
 		\end{equation*}
 		Therefore, $\overline{D(M_{u})} = L^{2}(X,\mu)$.
-	\item [(b)]
+	\item
 		Suppose $f_{n}\in D(M_{u})$ such that $f_{n}\to f$ and $uf_{n}\to g$ in $L^{2}(X,\mu)$. We can take a subsequence $f_{n_{k}}$ such that $f_{n_{k}}\to f$ a.e and $uf_{n_{k}}\to g$ in $L^{2}(X,\mu)$. Taking a further subsequence (which we relabel as $\cdot_{n_{k}}$) we have $uf_{n_{k}}\to uf$ a.e and so we must have that $uf = g$ and $f\in D(M_{u})$.
-	\item [(c)]
+	\item
 		For any $f\in D(M_{u})$ and $g\in D(M_{u}^{*})$ we have the identity,
 		\begin{equation*}
 			\braket{g,M_{u}f} = \braket{M_{u}^{*}g,f}
@@ -58,31 +58,31 @@ for all $f\in D(M_{u})$. Show the following statements.
 			\braket{g,M_{u}f} = \braket{M_{\overline{u}}g,f}
 		\end{equation*}
 		for all $f\in D(M_{u})$ and $g\in D(M_{u}^{*})$ so $M_{u}^{*} = M_{\overline{u}}$. Of course if $u$ is real-valued we have $\overline{u}=u$ and clearly $M_{u}$ is self-adjoint.
-	\item [(d)]
+	\item
 		If $u\in L^{\infty}(X,\mu)$ we can write,
 		\begin{equation*}
 			\|M_{u}f\|_{2} = \|uf\|_{2}\leq \|u\|_{\infty}\|f\|_{2} \quad \forall f\in L^{2}(X,\mu)
 		\end{equation*}
-\end{itemize}
+\end{enumerate}
 
 \subsection{Exercise 3 (Multiplication operators II)}
 
 Let $(X,\mu)$ be a $\sigma$-finite measure space and $M_{u}$ the multiplication operator for a measurable function $u:X\to\mathbb{C}$.
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item
 		The operator $M_{u}$ is self-adjoint if and only if the essential range of $u$ is contained in $\mathbb{R}$, which, in turn, holds if and only if $u$ is real-valued almost everywhere.
-	\item [(b)]
+	\item
 		The operator $M_{u}$ is bounded if and only if the essential range of $u$ is bounded, which, in turn, holds if and only if $u\in L^{\infty}(X,\mu)$. In this case,
 		\begin{equation*}
 			\|M_{u}\| = \|u\|_{\infty} = \sup\left\{|\lambda|\colon \lambda \text{ is in the essential range of }u\right\}
 		\end{equation*}
-	\item [(c)]
+	\item
 		$M_{u}=0$ holds if and only if the essential range of $u$ is $\{0\}$ which, in turn, holds if and only if $u=0$ holds almost everywhere.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Solution:}
-\begin{itemize}
-	\item [(a)]
+\begin{enumerate}[(a)]
+	\item
 		\begin{equation*}
 			\begin{aligned}
 				M_{u}\text{ self-adjoint} &\iff \int_{X}\overline{uf}f\,d\mu = \int_{X}\overline{f}uf\,d\mu \quad \forall f\in D(M_{u})\\
@@ -92,7 +92,7 @@ Let $(X,\mu)$ be a $\sigma$-finite measure space and $M_{u}$ the multiplication 
 				&\iff \text{ess ran }u\subset\mathbb{R}
 			\end{aligned}
 		\end{equation*}
-	\item [(b)]
+	\item
 		\begin{equation*}
 			\begin{aligned}
 				M_{u} \text{ bounded} &\iff \int_{X}|uf|^{2}\,d\mu \leq C\int_{X}|f|^{2}\,d\mu \quad \forall f\in L^{2}(X,\mu)\\
@@ -102,7 +102,7 @@ Let $(X,\mu)$ be a $\sigma$-finite measure space and $M_{u}$ the multiplication 
 				&\iff \|u\|_{\infty} = \sup\left\{|\lambda|\colon \lambda\in\text{ess ran }u\right\}\text{ and }u\in L^{\infty}(X,\mu)
 			\end{aligned}
 		\end{equation*}
-	\item [(c)]
+	\item
 		\begin{equation*}
 			\begin{aligned}
 				M_{u}=0 &\iff 0 = \|M_{u}f\|_{2}^{2} = \int_{X}|uf|^{2}\,d\mu \quad \forall (0\neq)f\in D(M_{u})\\
@@ -110,7 +110,7 @@ Let $(X,\mu)$ be a $\sigma$-finite measure space and $M_{u}$ the multiplication 
 				&\iff \text{ess ran }u = \left\{0\right\}
 			\end{aligned}
 		\end{equation*}
-\end{itemize}
+\end{enumerate}
 
 \subsection{Exercise 4 (Closure convergence)}
 
