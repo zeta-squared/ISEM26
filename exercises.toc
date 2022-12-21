@@ -49,3 +49,6 @@
 \contentsline {section}{\numberline {5}Lecture 5 -- Exercises}{19}{section.5}%
 \contentsline {section}{\numberline {6}Lecture 6 -- Exercises}{20}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Exercise 1 (Density of $C_{c}$)}{20}{subsection.6.1}%
+\contentsline {paragraph}{Solution:}{20}{section*.31}%
+\contentsline {subsection}{\numberline {6.2}Exercise 2 (Inclusion of $\ell ^{p}$ spaces)}{20}{subsection.6.2}%
+\contentsline {paragraph}{Solution:}{21}{section*.32}%

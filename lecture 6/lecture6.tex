@@ -1,3 +1,71 @@
 \section{Lecture 6 -- Exercises}
 
-\subsection{Exercise 1 (Density of \texorpdfstring{$C_{c}$}))}
+\subsection{Exercise 1 (Density of \texorpdfstring{$C_{c}$}{})}
+Let $(X,m)$ be an infinite discrete measure space and $p\in[1,\infty]$. Show that $C_{c}(X)$ is dense in $\ell^{p}(X,m)$ if and only if $p\in[1,\infty)$.
+
+\paragraph{Solution:}
+We first recall the supremum norm definition,
+\begin{equation*}
+	\|f\|_{\infty}:=\inf\left\{c\geq 0 \colon \sum_{|f(x)|>c}m(x)=0\right\}
+\end{equation*}
+
+($\implies$): Suppose that $\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}=\ell^{\infty}(X,m)$. Since $\mathds{1}\in\ell^{\infty}(X,m)$ then there exists $(f_{n})\in C_{c}(X)$ such that $\|f_{n}-\mathds{1}\|_{\infty}\to 0$. By definition, $f_{n}$ has finite support for each $n\in\mathbb{N}$ and so for every $f_{n}$ there exists $x_{n}\in X$ such that $f(x_{n})=0$ and hence $\|f_{n}-\mathds{1}\|_{\infty}=1$ for all $n$. This is clearly a contradiction and so we must have $p\in[1,\infty)$.
+
+($\impliedby$): For any $f\in\ell^{p}(X,m)$ we can assume $\text{supp}(f)$ is countable. Setting $K_{n}=\left\{x_{1},\ldots,x_{n}\colon x_{i}\in \text{supp}(f),\, i=1,\ldots,n\right\}$ then $K_{n}$ is finite, $K_{n}\subset K_{n+1}$ and $\bigcup_{n}K_{n}=\text{supp}(f)$. Taking the sequence $(\mathds{1}_{K_{n}}f)$ it is clear that $\mathds{1}_{K_{n}}f\to f$ pointwise and $|\mathds{1}_{K_{n}}f|\leq f$ a.e, hence by dominated convergence $\|\mathds{1}_{K_{n}}f - f\|_{p}\to 0$ for $p\in[1,\infty)$. So $\overline{C_{c}(X)}^{\|\cdot\|_{p}}=\ell^{p}(X,m)$ for $p\in[1,\infty)$.
+
+\subsection{Exercise 2 (Inclusion of \texorpdfstring{$\ell^{p}$}{} spaces)}
+
+Let $(X,m)$ be a discrete measure space.
+\begin{enumerate}[(a)]
+	\item 
+		Show the equivalence of the following statements:
+		\begin{enumerate}[(i)]
+			\item 
+				$\ell^{1}(X,m)\subseteq\ell^{\infty}(X,m)$
+			\item 
+				$\ell^{1}(X,m)\subseteq C_{0}(X):=\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$
+			\item 
+				There exists $\alpha>0$ such that $m\geq\alpha$
+		\end{enumerate}
+	\item 
+		Show the equivalence of the following statements:
+		\begin{enumerate}[(i)]
+			\item 
+				$\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$
+			\item 
+				$m(X)<\infty$
+		\end{enumerate}
+\end{enumerate}
+
+\paragraph{Solution:}
+
+\begin{enumerate}[(a)]
+	\item 
+		((i)$\iff$(ii)): The inclusion in (i) is equivalent to the existence of $c>0$ such that $\|f\|_{\infty}\leq c\|f\|_{1}$ for all $f\in\ell^{1}(X,m)$. From exercise 1 we have $\overline{C_{c}(X)}^{\|\cdot\|_{1}}=\ell^{1}(X,m)$ so it is sufficient to show $\overline{C_{c}(X)}^{\|\cdot\|_{1}}\subseteq \overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Let $(f_{n})\in C_{c}(X)$ be a Cauchy sequence with respect to $\|\cdot\|_{1}$, then there exists $f\in\overline{C_{c}(X)}^{\|\cdot\|_{1}}$ such that $\|f_{n}-f\|_{1}\to 0$. By the earlier inequality we also have that $(f_{n})$ is Cauchy with respect to $\|\cdot\|_{\infty}$, $f\in\ell^{\infty}(X,m)$ and $\|f_{n}-f\|_{\infty}\to 0$. So $f\in\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Therefore, $\overline{C_{c}(X)}^{\|\cdot\|_{1}}\subseteq\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$.
+
+		The reverse implication is trivial since $C_{c}(X)\subset\ell^{\infty}(X,m)$.
+
+		((i)$\iff$(iii)): If (i) is satisfied then from above we have,
+		\begin{equation*}
+			\frac{1}{c}\|f\|_{\infty}\leq \|f\|_{1} \quad \forall f\in\ell^{1}(X,m)
+		\end{equation*}
+		For any $x\in X$ taking $f=\mathds{1}_{x}$ we have,
+		\begin{equation*}
+			\frac{1}{c}\leq m(x)
+		\end{equation*}
+		Setting $\alpha=\frac{1}{c}$ gives (iii). Now if (iii) is satisfied for any $f\in\ell^{1}(X,m)$ we have,
+		\begin{equation*}
+			\alpha |f(x)| \leq |f(x)|m(x) \leq \|f\|_{1}
+		\end{equation*}
+		Taking an essential supremum gives $\|f\|_{\infty}\leq\frac{1}{\alpha}\|f\|_{1}$ and so (i) holds.
+	\item 
+		First suppose $\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$. Since $\mathds{1}\in\ell^{\infty}(X,m)$ we have,
+		\begin{equation*}
+			m(X)=\sum_{x\in X}m(x) = \|\mathds{1}\|_{1} < \infty
+		\end{equation*}
+		Conversely if $m(X)<\infty$ then for any $f\in\ell^{\infty}(X,m)$ we have,
+		\begin{equation*}
+			\sum_{x\in X}|f(x)|m(x) \leq \|f\|_{\infty}\sum_{x\in X}m(x) = \|f\|_{\infty}m(X) < \infty
+		\end{equation*}
+		Hence, $\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$.
+\end{enumerate}
