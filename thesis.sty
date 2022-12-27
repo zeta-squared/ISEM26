@@ -1,0 +1,52 @@
+% Packages to include as well as geometry and fonts
+\usepackage{verbatim}
+\usepackage{amsthm, upref}
+\usepackage[theoremfont]{newtxtext}
+\usepackage{newtxmath}
+\usepackage{enumerate}
+\usepackage{braket}
+\usepackage{hyperref, bookmark}
+\usepackage{dsfont}
+
+% Numbering
+\numberwithin{equation}{section}
+
+% Theorem environments
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% Definition environment
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+
+% Remark environment
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+
+% Common operators
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\dv}{div}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\esupp}{ess-supp}
+\DeclareMathOperator{\inn}{int}
+\DeclareMathOperator{\spr}{spr}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\V}{V}
+\DeclareMathOperator{\ddet}{det}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\jjac}{Jac}
+\DeclareMathOperator{\graph}{graph}
