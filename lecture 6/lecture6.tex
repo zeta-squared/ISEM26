@@ -69,3 +69,44 @@ Let $(X,m)$ be a discrete measure space.
 		\end{equation*}
 		Hence, $\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$.
 \end{enumerate}
+
+\subsection{Exercise 3 (Boundedness)}
+Let $(b,c)$ be a graph over $(X,m)$. Show that $\mathcal{L}$ is bounded on $\ell^2(X,m)$ if and only if it is bounded on $\ell^p(X,m)$ for some $p\in [1,\infty]$.
+
+\paragraph{Solution:}
+
+We recall the following facts from Lecture 3: the \emph{weighted degree function} of a graph is defined by
+\begin{equation*}
+	\mathrm{Deg}(x):= \frac{1}{m(x)}\left[\sum_{y\in X}b(x,y) +c(x) \right],
+\end{equation*}
+and the Laplacian $\mathcal{L}$ is bounded on $\ell^2(X,m)$ if and only if $\mathrm{Deg}(\cdot)$ is bounded on $X$ (see Theorem 2.18). Thus it suffices to prove that if $\mathcal{L}$ is bounded on $\ell^p(X,m)$ for some $p\in [1,\infty]$, then the weighted degree function is bounded on $X$.
+
+We write $\|\cdot\|_p$ for the norm on $\ell^p(X,m)$. Let $\kappa_p$ be the operator norm of $\mathcal{L}$ on $\ell^p(X,m)$, i.e.\ $\kappa_p = \sup_{\|f\|_p \le 1}\|\mathcal{L}f\|_p$. We now compute
+\begin{equation}
+	\mathcal{L}\mathds{1}_x(y) = \begin{cases}
+		\mathrm{Deg}(x) \qquad y=x \\ -\frac{b(x,y)}{m(y)} \qquad y\ne x.
+		\end{cases}
+\end{equation}
+The above calculation shows that $\mathcal{L}\mathds{1}_x(y)\le 0$ if $y\ne x$. We treat the case $p=\infty$ first. Fix an arbitrary $x\in X$, and observe that
+\begin{equation*}
+	\|\mathcal{L}\mathds{1}_x\|_\infty = \sup_{y\in X}|\mathcal{L}\mathds{1}_x(y)| = \mathcal{L}\mathds{1}_x(x) = \mathrm{Deg}(x).
+\end{equation*}
+Clearly $\|\mathds{1}_x\|_\infty =1$ for all $x\in X$, so it follows that
+\begin{equation*}
+	\sup_{x\in X}\mathrm{Deg}(x) = \sup_{x\in X}\|\mathcal{L}\mathds{1}_x\|_\infty \le \kappa_\infty \sup_{x\in X}\|\mathds{1}_x\|_\infty = \kappa_\infty.
+\end{equation*}
+Hence $\mathrm{Deg}(\cdot)$ is bounded on $X$.
+
+We have that $\|\mathds{1}_x\|_p=m(x)^{1/p}$ for each $x\in X$, where $1/\infty := 0$. Thus if $1\le p<\infty$, it follows that
+\begin{equation*}
+	\sum_{y\in X}b(x,y) + c(x) = m(x)\mathcal{L}\mathds{1}_x(x) = \braket{\mathds{1}_x, \mathcal{L}\mathds{1}_x} \le \|\mathcal{L}\mathds{1}_x\|_p \|\mathds{1}\|_{p'},
+\end{equation*}
+where $\braket{\cdot, \cdot}$ is the duality pairing between $\ell^p(X,m)$ and $\ell^{p'}(X,m)$ given by
+\begin{equation*}
+	\braket{f,g} = \sum_{x\in X}f(x)g(x)m(x), \qquad f\in \ell^{p'}(X,m), g\in \ell^p(X,m).
+\end{equation*}
+Therefore
+\begin{equation}
+	m(x)\mathrm{Deg}(x) \le \|\mathcal{L}\mathds{1}_x\|_p \|\mathds{1}\|_{p'} \le \kappa_p m(x)^{1/p}m(x)^{1/p'} = \kappa_p m(x),
+\end{equation}
+which yields the bound $\sup_{x\in X}\mathrm{Deg}(x) \le \kappa_p$.

@@ -52,3 +52,5 @@
 \contentsline {paragraph}{Solution:}{20}{section*.31}%
 \contentsline {subsection}{\numberline {6.2}Exercise 2 (Inclusion of $\ell ^{p}$ spaces)}{20}{subsection.6.2}%
 \contentsline {paragraph}{Solution:}{21}{section*.32}%
+\contentsline {subsection}{\numberline {6.3}Exercise 3 (Boundedness)}{21}{subsection.6.3}%
+\contentsline {paragraph}{Solution:}{22}{section*.33}%
