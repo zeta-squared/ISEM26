@@ -4,7 +4,18 @@
 
 \textbf{Note from discussion forum}: in this exercise, we need $c=0$.
 
-Let $(b, c)$ be a graph over $(X,m)$ with $c=0$, such that $m(X)=1$ and $\lambda_0 := \inf\sigma(L^{(D)})>0$. Show that $Q^{(D)}\ne Q^{(N)}$.
+Let $(b, 0)$ be a graph over $(X,m)$ such that $m(X)=1$ and $\lambda_0 := \inf\sigma(L^{(D)})>0$. Show that $Q^{(D)}\ne Q^{(N)}$.
+
+\paragraph{Solution:}
+Note that by definition, $Q^{(N)}$ is an extension of $Q^{(D)}$ --- see the first two pages of Lecture 6. Assume for contradiction that $Q^{(D)}=Q^{(N)}$, i.e.\ in particular $D(Q^{(D)})=D(Q^{(N)})$. Recall the definition of the domain of the Neumann form, namely
+\begin{equation*}
+	D(Q^{(N)}) = \mathcal{D}\cap \ell^2(X,m),
+\end{equation*}
+where $\mathcal{D} := \{f\in C(X): \sum_{x\in X}b(x,y)[f(x)-f(y)]^2<\infty\}$ denotes the space of functions with finite energy. Since $m(X)=1$, we have that
+\begin{equation*}
+	1 = \sum_{x\in X}m(x) = \sum_{x\in X}1\cdot m(x) = \|\mathds{1}\|^2_2
+\end{equation*}
+where $\mathds{1}$ denotes the constant function with value $1$. Therefore $\mathds{1}\in \ell^2(X,m)$, and since it is clear that $\mathds{1}\in \mathcal{D}$, we find that $\mathds{1}\in D(Q^{(N)}) = D(Q^{(D)})$. However, since $L^{(D)}\mathds{1}=0$, this implies $\lambda_0 = \inf\sigma(L^{(D)})=0$, which is a contradiction,. Hence $Q^{(D)}\ne Q^{(N)}$ as required.
 
 \subsection{Bounded functions in the domain form an algebra}
 Let $(X,\mu)$ be a $\sigma$-finite measure space, and let $Q$ be a Dirichlet form on $L^2(X,\mu)$ with domain $D(Q)$. Show that $D(Q)\cap L^\infty(X,\mu)$ is an algebra.
