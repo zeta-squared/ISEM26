@@ -1,0 +1,28 @@
+\section{Lecture 7 Exercises}
+
+\subsection{Dirichlet is not Neumann}
+
+\textbf{Note from discussion forum}: in this exercise, we need $c=0$.
+
+Let $(b, c)$ be a graph over $(X,m)$ with $c=0$, such that $m(X)=1$ and $\lambda_0 := \inf\sigma(L^{(D)})>0$. Show that $Q^{(D)}\ne Q^{(N)}$.
+
+\subsection{Bounded functions in the domain form an algebra}
+Let $(X,\mu)$ be a $\sigma$-finite measure space, and let $Q$ be a Dirichlet form on $L^2(X,\mu)$ with domain $D(Q)$. Show that $D(Q)\cap L^\infty(X,\mu)$ is an algebra.
+
+\paragraph{Solution:}
+
+Obviously $D(Q)\cap L^\infty(X,\mu)$ is a vector space, so it remains to show that it is closed under multiplication.
+
+By Lemma 5.11, we have
+\begin{equation*}
+	\braket{(I-e^{-tL})(fg), fg} \le 2\|g\|^2_\infty \braket{(I-e^{-tL})f,f} + 2\|f\|^2_\infty \braket{(I-e^{-tL})g,g}
+\end{equation*}
+for all $f,g\in L^2(X,\mu)\cap L^\infty(X,\mu)$ and all $t>0$. Dividing both sides by $t$, we obtain
+\begin{equation}
+	Q^{(t)}(fg) \le 2\|g\|^2_\infty Q^{(t)}(f) + 2\|f\|^2_\infty Q^{(t)}(g).
+\end{equation}
+for all $t>0$, where $Q^{(t)}(f) := \frac{1}{t}\braket{(I-e^{-tL})f,f}$. Now assume that $f, g\in D(Q)\cap L^\infty(X,\mu) \subset L^2(X,\mu)\cap L^\infty(X,\mu)$. By Lemma 5.12, we may take $t\downarrow 0$ in the above inequality and deduce
+\begin{equation*}
+	Q'(fg) \le 2\|g\|^2_\infty Q'(f) + 2\|f\|^2_\infty Q'(g) = 2\|g\|^2_\infty Q(f) + 2\|f\|^2_\infty Q(g),.
+\end{equation*}
+where we have used that $f, g\in D(Q)$ in the final equality. Hence $Q'(fg)<\infty$, which implies (by Lemma 5.12 again) that $fg\in D(Q)$. Clearly $fg\in L^\infty(X,\mu)$ as well, and thus $fg \in D(Q)\cap L^\infty(X,\mu)$.
