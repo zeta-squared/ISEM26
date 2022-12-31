@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.17)  27 DEC 2022 18:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.17)  31 DEC 2022 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,7 +448,7 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 )
 (./exercises.aux (./lecture 1/lecture1.aux) (./lecture 2/lecture2.aux)
 (./lecture 3/lecture3.aux) (./lecture 4/lecture4.aux) (./lecture 5/lecture5.aux
-) (./lecture 6/lecture6.aux))
+) (./lecture 6/lecture6.aux) (./lecture 7/lecture7.aux))
 \openout1 = `exercises.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 4.
@@ -657,33 +657,41 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 
 
 
-] [21]) [22]
-(./exercises.aux (./lecture 1/lecture1.aux) (./lecture 2/lecture2.aux)
-(./lecture 3/lecture3.aux) (./lecture 4/lecture4.aux) (./lecture 5/lecture5.aux
-) (./lecture 6/lecture6.aux)) ) 
+] [21] [22])
+[23] [24]
+\openout2 = `"lecture 7/lecture7.aux"'.
+
+ (./lecture 7/lecture7.tex) [25
+
+
+
+] [26] (./exercises.aux
+(./lecture 1/lecture1.aux) (./lecture 2/lecture2.aux) (./lecture 3/lecture3.aux
+) (./lecture 4/lecture4.aux) (./lecture 5/lecture5.aux)
+(./lecture 6/lecture6.aux) (./lecture 7/lecture7.aux)) ) 
 Here is how much of TeX's memory you used:
- 12281 strings out of 478599
- 168928 string characters out of 5858101
- 467847 words of memory out of 5000000
- 29769 multiletter control sequences out of 15000+600000
+ 12316 strings out of 478599
+ 169437 string characters out of 5858101
+ 468192 words of memory out of 5000000
+ 29779 multiletter control sequences out of 15000+600000
  465487 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,15n,94p,895b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/newt
-x/ntx-ec-tlf.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.
-enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><c:/texliv
-e/2021/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><c:/texlive/2021/texmf-
-dist/fonts/type1/public/doublestroke/dsrom12.pfb><c:/texlive/2021/texmf-dist/fo
-nts/type1/public/newtx/txexs.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public
-/newtx/txmiaX.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/txfonts/txsyb.
-pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/newtx/txsys.pfb><c:/texlive/
-2021/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/texlive/2021/texmf-dist/f
-onts/type1/public/newtx/ztmr.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public
-/newtx/ztmri.pfb>
-Output written on exercises.pdf (22 pages, 248822 bytes).
+ 86i,15n,94p,914b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-
+dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{c:/texlive/2021/texmf-dist/fonts/enc
+/dvips/newtx/ntx-ot1-tlf.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/new
+tx/NewTXMI.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pf
+b><c:/texlive/2021/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/public/newtx/txexs.pfb><c:/texlive/2021/texm
+f-dist/fonts/type1/public/newtx/txmiaX.pfb><c:/texlive/2021/texmf-dist/fonts/ty
+pe1/public/txfonts/txsyb.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/new
+tx/txsys.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><c:/
+texlive/2021/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><c:/texlive/2021/texm
+f-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on exercises.pdf (26 pages, 261119 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 132 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 149 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

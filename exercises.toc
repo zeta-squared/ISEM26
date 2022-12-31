@@ -52,5 +52,12 @@
 \contentsline {paragraph}{Solution:}{20}{section*.31}%
 \contentsline {subsection}{\numberline {6.2}Exercise 2 (Inclusion of $\ell ^{p}$ spaces)}{20}{subsection.6.2}%
 \contentsline {paragraph}{Solution:}{21}{section*.32}%
-\contentsline {subsection}{\numberline {6.3}Exercise 3 (Boundedness)}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.3}Exercise 3 (Boundedness)}{22}{subsection.6.3}%
 \contentsline {paragraph}{Solution:}{22}{section*.33}%
+\contentsline {subsection}{\numberline {6.4}Exercise 4: Forms in between Dirichlet and Neumann}{23}{subsection.6.4}%
+\contentsline {paragraph}{Solution:}{23}{section*.34}%
+\contentsline {section}{\numberline {7}Lecture 7 Exercises}{25}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Dirichlet is not Neumann}{25}{subsection.7.1}%
+\contentsline {paragraph}{Solution:}{25}{section*.35}%
+\contentsline {subsection}{\numberline {7.2}Bounded functions in the domain form an algebra}{25}{subsection.7.2}%
+\contentsline {paragraph}{Solution:}{25}{section*.36}%

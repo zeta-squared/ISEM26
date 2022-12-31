@@ -14,26 +14,27 @@ We first recall the supremum norm definition,
 ($\impliedby$): For any $f\in\ell^{p}(X,m)$ we can assume $\text{supp}(f)$ is countable. Setting $K_{n}=\left\{x_{1},\ldots,x_{n}\colon x_{i}\in \text{supp}(f),\, i=1,\ldots,n\right\}$ then $K_{n}$ is finite, $K_{n}\subset K_{n+1}$ and $\bigcup_{n}K_{n}=\text{supp}(f)$. Taking the sequence $(\mathds{1}_{K_{n}}f)$ it is clear that $\mathds{1}_{K_{n}}f\to f$ pointwise and $|\mathds{1}_{K_{n}}f|\leq f$ a.e, hence by dominated convergence $\|\mathds{1}_{K_{n}}f - f\|_{p}\to 0$ for $p\in[1,\infty)$. So $\overline{C_{c}(X)}^{\|\cdot\|_{p}}=\ell^{p}(X,m)$ for $p\in[1,\infty)$.
 
 \subsection{Exercise 2 (Inclusion of \texorpdfstring{$\ell^{p}$}{} spaces)}
+\emph{Note}: we modify the question so that we will solve the bonus exercise as well.
 
 Let $(X,m)$ be a discrete measure space.
 \begin{enumerate}[(a)]
 	\item 
-		Show the equivalence of the following statements:
+		For any $p\in [1,\infty)$, show the equivalence of the following statements:
 		\begin{enumerate}[(i)]
 			\item 
-				$\ell^{1}(X,m)\subseteq\ell^{\infty}(X,m)$
+				$\ell^{p}(X,m)\subseteq\ell^{\infty}(X,m)$.
 			\item 
-				$\ell^{1}(X,m)\subseteq C_{0}(X):=\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$
+				$\ell^{p}(X,m)\subseteq C_{0}(X):=\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$.
 			\item 
-				There exists $\alpha>0$ such that $m\geq\alpha$
+				There exists $\alpha>0$ such that $m\geq\alpha$.
 		\end{enumerate}
 	\item 
-		Show the equivalence of the following statements:
+		For any $p\in [1, \infty)$, show the equivalence of the following statements:
 		\begin{enumerate}[(i)]
 			\item 
-				$\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$
+				$\ell^{p}(X,m)\supseteq\ell^{\infty}(X,m)$.
 			\item 
-				$m(X)<\infty$
+				$m(X)<\infty$.
 		\end{enumerate}
 \end{enumerate}
 
@@ -41,33 +42,39 @@ Let $(X,m)$ be a discrete measure space.
 
 \begin{enumerate}[(a)]
 	\item 
-		((i)$\iff$(ii)): The inclusion in (i) is equivalent to the existence of $c>0$ such that $\|f\|_{\infty}\leq c\|f\|_{1}$ for all $f\in\ell^{1}(X,m)$. From exercise 1 we have $\overline{C_{c}(X)}^{\|\cdot\|_{1}}=\ell^{1}(X,m)$ so it is sufficient to show $\overline{C_{c}(X)}^{\|\cdot\|_{1}}\subseteq \overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Let $(f_{n})\in C_{c}(X)$ be a Cauchy sequence with respect to $\|\cdot\|_{1}$, then there exists $f\in\overline{C_{c}(X)}^{\|\cdot\|_{1}}$ such that $\|f_{n}-f\|_{1}\to 0$. By the earlier inequality we also have that $(f_{n})$ is Cauchy with respect to $\|\cdot\|_{\infty}$, $f\in\ell^{\infty}(X,m)$ and $\|f_{n}-f\|_{\infty}\to 0$. So $f\in\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Therefore, $\overline{C_{c}(X)}^{\|\cdot\|_{1}}\subseteq\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$.
-
+		(i)$\iff$(ii): The inclusion in (i) is equivalent to the existence of $c>0$ such that $\|f\|_{\infty}\leq c\|f\|_{p}$ for all $f\in\ell^{p}(X,m)$. From Exercise 1 we have $\overline{C_{c}(X)}^{\|\cdot\|_{p}}=\ell^{p}(X,m)$, so it is sufficient to show $\overline{C_{c}(X)}^{\|\cdot\|_{p}}\subseteq \overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Let $(f_{n})\in C_{c}(X)$ be a Cauchy sequence with respect to $\|\cdot\|_{p}$. Then there exists $f\in\overline{C_{c}(X)}^{\|\cdot\|_{p}}$ such that $\|f_{n}-f\|_{p}\to 0$. By the earlier inequality we also have that $(f_{n})$ is Cauchy with respect to $\|\cdot\|_{\infty}$, $f\in\ell^{\infty}(X,m)$ and $\|f_{n}-f\|_{\infty}\to 0$. So $f\in\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}$. Therefore
+		\begin{equation*}
+			\ell^p(X,m)=\overline{C_{c}(X)}^{\|\cdot\|_{p}}\subseteq\overline{C_{c}(X)}^{\|\cdot\|_{\infty}}=C_0(X).
+		\end{equation*}
 		The reverse implication is trivial since $C_{c}(X)\subset\ell^{\infty}(X,m)$.
 
-		((i)$\iff$(iii)): If (i) is satisfied then from above we have,
+		(i)$\iff$(iii): If (i) is satisfied then from above we have,
 		\begin{equation*}
-			\frac{1}{c}\|f\|_{\infty}\leq \|f\|_{1} \quad \forall f\in\ell^{1}(X,m)
+			\frac{1}{c}\|f\|_{\infty}\leq \|f\|_{p} \quad \forall f\in\ell^{p}(X,m).
 		\end{equation*}
-		For any $x\in X$ taking $f=\mathds{1}_{x}$ we have,
+		For any $x\in X$, by taking $f=\mathds{1}_{x}$ we obtain
 		\begin{equation*}
-			\frac{1}{c}\leq m(x)
+			\frac{1}{c}\leq m(x)^{1/p}.
 		\end{equation*}
-		Setting $\alpha=\frac{1}{c}$ gives (iii). Now if (iii) is satisfied for any $f\in\ell^{1}(X,m)$ we have,
+		Setting $\alpha=\frac{1}{c^p}$ gives (iii). Now if (iii) is satisfied, then for any $f\in\ell^{p}(X,m)$ we have
 		\begin{equation*}
-			\alpha |f(x)| \leq |f(x)|m(x) \leq \|f\|_{1}
+			\alpha |f(x)|^p \leq |f(x)|^p m(x) \leq \|f\|^p_{p}.
 		\end{equation*}
-		Taking an essential supremum gives $\|f\|_{\infty}\leq\frac{1}{\alpha}\|f\|_{1}$ and so (i) holds.
+		Therefore
+		\begin{equation*}
+			\sup_{x\in X}|f(x)| \le \frac{1}{\alpha^{1/p}}\|f\|_p
+		\end{equation*}
+		which implies (i).
 	\item 
-		First suppose $\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$. Since $\mathds{1}\in\ell^{\infty}(X,m)$ we have,
+		First suppose $\ell^{p}(X,m)\supseteq\ell^{\infty}(X,m)$. Since $\mathds{1}\in\ell^{\infty}(X,m)$ we have,
 		\begin{equation*}
-			m(X)=\sum_{x\in X}m(x) = \|\mathds{1}\|_{1} < \infty
+			m(X)=\sum_{x\in X}m(x) = \|\mathds{1}\|^p_{p} < \infty.
 		\end{equation*}
 		Conversely if $m(X)<\infty$ then for any $f\in\ell^{\infty}(X,m)$ we have,
 		\begin{equation*}
-			\sum_{x\in X}|f(x)|m(x) \leq \|f\|_{\infty}\sum_{x\in X}m(x) = \|f\|_{\infty}m(X) < \infty
+			\|f\|^p_p = \sum_{x\in X}|f(x)|^p m(x) \leq \|f\|^p_{\infty}\sum_{x\in X}m(x) = \|f\|^p_{\infty}m(X) < \infty.
 		\end{equation*}
-		Hence, $\ell^{1}(X,m)\supseteq\ell^{\infty}(X,m)$.
+		Hence, $\ell^{p}(X,m)\supseteq\ell^{\infty}(X,m)$.
 \end{enumerate}
 
 \subsection{Exercise 3 (Boundedness)}
@@ -110,3 +117,40 @@ Therefore
 	m(x)\mathrm{Deg}(x) \le \|\mathcal{L}\mathds{1}_x\|_p \|\mathds{1}\|_{p'} \le \kappa_p m(x)^{1/p}m(x)^{1/p'} = \kappa_p m(x),
 \end{equation}
 which yields the bound $\sup_{x\in X}\mathrm{Deg}(x) \le \kappa_p$.
+
+\subsection{Exercise 4: Forms in between Dirichlet and Neumann}
+Let $(b,c)$ be a graph over $(X,m)$ and $U\subseteq X$. Define
+\begin{equation*}
+\begin{aligned}
+	D(Q^{(U)}) &= \overline{\{u\in D(Q^{(N)}) : U \cap \supp u \text{ is finite} \}}^{\|\cdot\|_{Q^{(N)}}} \\
+	Q^{(U)}(f,g) &= Q^{(N)}(f,g).
+\end{aligned}		
+\end{equation*}
+Show that
+\begin{enumerate}[(a)]
+	\item $Q^{(U)}$ is a Dirichlet form;
+	\item $Q^{(D)}\subseteq Q^{(U)} \subseteq Q^{(N)}$. Furthermore, show that $Q^{(X\setminus F)} = Q^{(D)}$ and $Q^{(F)}\subseteq Q^{(N)}$ for any finite subset $F\subseteq X$.
+\end{enumerate}
+
+\paragraph{Solution:}
+
+We define
+\begin{equation}
+	\mathcal{E}_U := \{u\in D(Q^{(N)}) : U \cap \supp u \text{ is finite} \}.
+\end{equation}
+for every subset $U\subseteq X$.
+
+(a): It is clear that $Q^{(U)}$ is a positive, symmetric form that is compatible with normal contractions, since these properties hold for $Q^{(N)}$. It remains to check that $Q^{(U)}$ is closed. For any $u, v\in D(Q^{(N)})$ and scalar $\lambda\in\mathbb{RR}$, note that $\supp (\lambda u)=\supp u$ and $\supp(u+v) \subseteq \supp u \cup \supp v$. Hence, if $u,v\in\mathcal{E}_U$, it follows that $\supp(\lambda u)\cap U$ and $\supp(u+v)\cap U$ are finite subsets as well, which shows that $\mathcal{E}_U$ is a vector space. Consequently, $D(Q^{(U)})$ is a closed subspace of the Banach space $(D(Q^{(N)}), \|\cdot\|_{Q^{(N)}})$, and thus is itself a Banach space with respect to the norm $\|\cdot\|_{Q^{(N)}}$. This proves that $Q^{(U)}$ is a closed form. Combining with the previous observations, we conclude that $Q^{(U)}$ is a Dirichlet form.
+
+(b): It is immediate from the definition that $Q^{(U)}\subseteq Q^{(N)}$, i.e.\ $Q^{(U)}$ is a restriction of $Q^{(N)}$. On the other hand, if $u \in C_c(X)$, then $U\cap\supp u$ is a finite set for any subset $U\subseteq X$. Hence $C_c(X)\subseteq\mathcal{E}$. Consequently
+\begin{equation*}
+	D(Q^{(D)}) = \overline{C_c(X)}^{\|\cdot\|_{Q^{(N)}}} \subseteq \overline{\mathcal{E}}^{\|\cdot\|_{Q^{(N)}}} = D(Q^{(U)}),
+\end{equation*}
+hence $Q^{(D)}$ is a restriction of $Q^{(U)}$.
+
+Let us now make some general observations.
+\begin{enumerate}[(i)]
+	\item If $U\subseteq V\subseteq X$, then $\mathcal{E}_V\subseteq \mathcal{E}_U$.
+	\item If $U=X$, then clearly $\mathcal{E}_U = C_c(X)$. Moreover, if $U$ is a finite (possibly empty) subset of $X$, then $\mathcal{E}_U = D(Q^{(N)})$, since $U\cap\supp u$ is a finite subset for all $u\in D(Q^{(N)}).$.
+\end{enumerate}
+For a given finite subset $F\subseteq X$, assertion (ii) above shows that $Q^{(F)}=Q^{(N)}$. Now suppose $u\in \mathcal{E}_{X\setminus F}$. By definition, $(X\setminus F)\cap\supp u$ is a finite subset. However, since $F$ is finite, so is $F\cap\supp u$, and therefore $\supp u$ is finite. This shows that $\mathcal{E}_{X\setminus F}\subseteq C_c(X)$. Upon taking closures in the $Q^{(N)}$-norm, we conclude that $D(Q^{X\setminus F})=D(Q^{(D)})$ and thus $Q^{(X\setminus F)}=Q^{(D)}$.
